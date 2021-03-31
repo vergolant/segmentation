@@ -17,7 +17,7 @@ license: mit
 inference: false
 ---
 
-# Pretrained speaker segmentation model
+# pyannote.audio // speaker segmentation
 
 This model relies on `pyannote.audio` 2.0 (which is still in development):
 
@@ -29,7 +29,7 @@ $ pip install https://github.com/pyannote/pyannote-audio/archive/develop.zip
 
 ```python
 >>> from pyannote.audio import Inference
->>> inference = Inference("pyannote/Segmentation")
+>>> inference = Inference("pyannote/segmentation")
 >>> segmentation = inference("audio.wav")
 ```
 
@@ -40,9 +40,12 @@ $ pip install https://github.com/pyannote/pyannote-audio/archive/develop.zip
 ```python
 >>> from pyannote.audio.pipelines import VoiceActivityDetection
 >>> HYPER_PARAMETERS = {"onset": 0.5, "offset": 0.5, "min_duration_on": 0.0, "min_duration_off": 0.0}
->>> pipeline = VoiceActivityDetection(segmentation="pyannote/Segmentation").instantiate(HYPER_PARAMETERS)
+>>> pipeline = VoiceActivityDetection(segmentation="pyannote/segmentation")
+>>> pipeline.instantiate(HYPER_PARAMETERS)
 >>> vad = pipeline("audio.wav")
 ```
+
+In order to reproduce results of the paper, one should use the following hyper-parameter values:
 
 Dataset         | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
@@ -50,14 +53,16 @@ AMI Mix-Headset | TODO    | TODO     | TODO              | TODO
 DIHARD3         | TODO    | TODO     | TODO              | TODO 
 VoxConverse     | TODO    | TODO     | TODO              | TODO 
 
-
 ### Overlapped speech detection
 
 ```python
 >>> from pyannote.audio.pipelines import OverlappedSpeechDetection
->>> pipeline = OverlappedSpeechDetection(segmentation="pyannote/Segmentation").instantiate(HYPER_PARAMETERS)
+>>> pipeline = OverlappedSpeechDetection(segmentation="pyannote/segmentation")
+>>> pipeline.instantiate(HYPER_PARAMETERS)
 >>> osd = pipeline("audio.wav")
 ```
+
+In order to reproduce results of the paper, one should use the following hyper-parameter values:
 
 Dataset         | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
@@ -70,9 +75,12 @@ VoxConverse     | TODO    | TODO     | TODO              | TODO
 
 ```python
 >>> from pyannote.audio.pipelines import Segmentation
->>> pipeline = Segmentation(segmentation="pyannote/Segmentation").instantiate(HYPER_PARAMETERS)
+>>> pipeline = Segmentation(segmentation="pyannote/segmentation")
+>>> pipeline.instantiate(HYPER_PARAMETERS)
 >>> seg = pipeline("audio.wav")
 ```
+In order to reproduce results of the paper, one should use the following hyper-parameter values:
+
 
 Dataset         | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
@@ -84,10 +92,21 @@ VoxConverse     | TODO    | TODO     | TODO              | TODO
 
 ```python
 >>> from pyannote.audio.pipelines import Resegmentation
->>> pipeline = Resegmentation(segmentation="pyannote/Segmentation", diarization="baseline")
->>> assert isinstance(baseline, pyannote.core.Annotation)
->>> resegmented_baseline = pipeline({"audio": "audio.wav", "baseline": baseline})
+>>> pipeline = Resegmentation(segmentation="pyannote/segmentation", 
+...                           diarization="baseline")
+>>> pipeline.instantiate(HYPER_PARAMETERS)
 ```
+
+VBx RTTM files are also provided in this repository for convenience:
+
+```python
+>>> from pyannote.database.utils import load_rttm
+>>> vbx = load_rttm("/path/to/vbx.rttm")
+>>> resegmented_vbx = pipeline({"audio": "DH_EVAL_000.wav", 
+...                             "baseline": vbx["DH_EVAL_000"]})
+```
+
+In order to reproduce (VBx) results of the paper, one should use the following hyper-parameter values:
 
 Dataset         | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
@@ -96,7 +115,6 @@ DIHARD3         | TODO    | TODO     | TODO              | TODO
 VoxConverse     | TODO    | TODO     | TODO              | TODO 
 
 ## Citations
-
 
 ```bibtex
 @inproceedings{Bredin2020,
