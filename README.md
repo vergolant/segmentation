@@ -49,9 +49,9 @@ In order to reproduce results of the paper, one should use the following hyper-p
 
 Dataset         | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
-AMI Mix-Headset | TODO    | TODO     | TODO              | TODO 
-DIHARD3         | TODO    | TODO     | TODO              | TODO 
-VoxConverse     | TODO    | TODO     | TODO              | TODO 
+AMI Mix-Headset | 0.851   | 0.430    | 0.115             | 0.146
+DIHARD3         | 0.855   | 0.292    | 0.036             | 0.001
+VoxConverse     | 0.883   | 0.688    | 0.106             | 0.526
 
 ### Overlapped speech detection
 
@@ -66,9 +66,9 @@ In order to reproduce results of the paper, one should use the following hyper-p
 
 Dataset         | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
-AMI Mix-Headset | TODO    | TODO     | TODO              | TODO 
-DIHARD3         | TODO    | TODO     | TODO              | TODO 
-VoxConverse     | TODO    | TODO     | TODO              | TODO 
+AMI Mix-Headset | 0.552   | 0.311    | 0.131             | 0.180
+DIHARD3         | 0.564   | 0.264    | 0.158             | 0.080
+VoxConverse     | 0.617   | 0.387    | 0.367             | 0.334
 
 
 ### Segmentation
@@ -84,9 +84,9 @@ In order to reproduce results of the paper, one should use the following hyper-p
 
 Dataset         | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
-AMI Mix-Headset | TODO    | TODO     | TODO              | TODO 
-DIHARD3         | TODO    | TODO     | TODO              | TODO 
-VoxConverse     | TODO    | TODO     | TODO              | TODO 
+AMI Mix-Headset | 0.784   | 0.661    | 0.127             | 0.003
+DIHARD3         | 0.848   | 0.495    | 0.056             | 0.000 
+VoxConverse     | 0.882   | 0.779    | 0.304             | 0.484
 
 ### Resegmentation
 
@@ -110,9 +110,9 @@ In order to reproduce (VBx) results of the paper, one should use the following h
 
 Dataset         | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
-AMI Mix-Headset | TODO    | TODO     | TODO              | TODO 
-DIHARD3         | TODO    | TODO     | TODO              | TODO 
-VoxConverse     | TODO    | TODO     | TODO              | TODO 
+AMI Mix-Headset | 0.542   | 0.527    | 0.044             | 0.705
+DIHARD3         | 0.592   | 0.489    | 0.163             | 0.182
+VoxConverse     | 0.537   | 0.724    | 0.410             | 0.563
 
 ## Citations
 
