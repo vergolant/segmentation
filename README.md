@@ -5,9 +5,9 @@ tags:
 - voice
 - speech
 - speaker
-- speaker segmentation
-- voice activity detection
-- overlapped speech detection
+- speaker-segmentation
+- voice-activity-detection
+- overlapped-speech-detection
 - resegmentation
 datasets:
 - ami
@@ -26,7 +26,7 @@ Model from *[End-to-end speaker segmentation for overlap-aware resegmentation](r
 ```bibtex
 @inproceedings{Bredin2020,
   Title = {{pyannote.audio: neural building blocks for speaker diarization}},
-  Author = {{Bredin}, Herv{\'e} and {Yin}, Ruiqing and {Coria}, Juan Manuel and {Gelly}, Gregory and {Korshunov}, Pavel and {Lavechin}, Marvin and {Fustes}, Diego and {Titeux}, Hadrien and {Bouaziz}, Wassim and {Gill}, Marie-Philippe},
+  Author = {{Bredin}, Herv{\\'e} and {Yin}, Ruiqing and {Coria}, Juan Manuel and {Gelly}, Gregory and {Korshunov}, Pavel and {Lavechin}, Marvin and {Fustes}, Diego and {Titeux}, Hadrien and {Bouaziz}, Wassim and {Gill}, Marie-Philippe},
   Booktitle = {ICASSP 2020, IEEE International Conference on Acoustics, Speech, and Signal Processing},
   Address = {Barcelona, Spain},
   Month = {May},
