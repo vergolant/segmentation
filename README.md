@@ -98,7 +98,7 @@ AMI Mix-Headset | 0.851   | 0.430    | 0.115             | 0.146
 DIHARD3         | 0.855   | 0.292    | 0.036             | 0.001
 VoxConverse     | 0.883   | 0.688    | 0.106             | 0.526
 
-We also provide the [expected output](paper/expected_outputs/vad) on those three datasets in RTTM format.
+We also provide the [expected output](tree/main/paper/expected_outputs/vad) on those three datasets in RTTM format.
 
 ### Overlapped speech detection
 
@@ -117,7 +117,7 @@ AMI Mix-Headset | 0.552   | 0.311    | 0.131             | 0.180
 DIHARD3         | 0.564   | 0.264    | 0.158             | 0.080
 VoxConverse     | 0.617   | 0.387    | 0.367             | 0.334
 
-We also provide the [expected output](paper/expected_outputs/osd) on those three datasets in RTTM format.
+We also provide the [expected output](tree/main/paper/expected_outputs/osd) on those three datasets in RTTM format.
 
 ### Resegmentation
 
@@ -138,7 +138,7 @@ VoxConverse     | 0.537   | 0.724    | 0.410             | 0.563
 
 
 
-[VBx RTTM files](paper/expected_outputs/vbx) are also provided in this repository for convenience:
+[VBx RTTM files](tree/main/paper/expected_outputs/vbx) are also provided in this repository for convenience:
 
 ```python
 from pyannote.database.utils import load_rttm
@@ -148,5 +148,5 @@ resegmented_vbx = pipeline({"audio": "DH_EVAL_000.wav",
 ```
 
 
-We also provide the [expected output](paper/expected_outputs/rsg) on those three datasets in RTTM format.
+We also provide the [expected output](tree/main/paper/expected_outputs/rsg) on those three datasets in RTTM format.
 
