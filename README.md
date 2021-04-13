@@ -108,7 +108,7 @@ AMI Mix-Headset | 0.552   | 0.311    | 0.131             | 0.180
 DIHARD3         | 0.564   | 0.264    | 0.158             | 0.080
 VoxConverse     | 0.617   | 0.387    | 0.367             | 0.334
 
-VBx resegmentation | `onset` | `offset` | `min_duration_on` | `min_duration_off`
+Resegmentation of VBx | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
 AMI Mix-Headset | 0.542   | 0.527    | 0.044             | 0.705
 DIHARD3         | 0.592   | 0.489    | 0.163             | 0.182
@@ -121,7 +121,7 @@ Expected outputs (and VBx baseline) are also provided in the `/reproducible_rese
 ```bibtex
 @inproceedings{Bredin2020,
   Title = {{pyannote.audio: neural building blocks for speaker diarization}},
-  Author = {{Bredin}, Herv{\\'e} and {Yin}, Ruiqing and {Coria}, Juan Manuel and {Gelly}, Gregory and {Korshunov}, Pavel and {Lavechin}, Marvin and {Fustes}, Diego and {Titeux}, Hadrien and {Bouaziz}, Wassim and {Gill}, Marie-Philippe},
+  Author = {{Bredin}, Herv{\\\\'e} and {Yin}, Ruiqing and {Coria}, Juan Manuel and {Gelly}, Gregory and {Korshunov}, Pavel and {Lavechin}, Marvin and {Fustes}, Diego and {Titeux}, Hadrien and {Bouaziz}, Wassim and {Gill}, Marie-Philippe},
   Booktitle = {ICASSP 2020, IEEE International Conference on Acoustics, Speech, and Signal Processing},
   Address = {Barcelona, Spain},
   Month = {May},
