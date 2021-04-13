@@ -5,9 +5,9 @@ tags:
 - voice
 - speech
 - speaker
-- speaker segmentation
-- voice activity detection
-- overlapped speech detection
+- speaker-segmentation
+- voice-activity-detection
+- overlapped-speech-detection
 - resegmentation
 datasets:
 - ami
