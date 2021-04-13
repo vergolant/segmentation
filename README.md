@@ -21,7 +21,7 @@ inference: false
 
 ![Example](example.png)
 
-Model from *[End-to-end speaker segmentation for overlap-aware resegmentation](http://arxiv.org/abs/2104.04045)*,
+Model from *[End-to-end speaker segmentation for overlap-aware resegmentation](http://arxiv.org/abs/2104.04045)*,  
 by Hervé Bredin and Antoine Laurent.
 
 Relies on pyannote.audio 2.0 currently in development: see [installation instructions](https://github.com/pyannote/pyannote-audio/tree/develop#installation).
@@ -121,7 +121,7 @@ Expected outputs (and VBx baseline) are also provided in the `/reproducible_rese
 ```bibtex
 @inproceedings{Bredin2020,
   Title = {{pyannote.audio: neural building blocks for speaker diarization}},
-  Author = {{Bredin}, Herv{\'e} and {Yin}, Ruiqing and {Coria}, Juan Manuel and {Gelly}, Gregory and {Korshunov}, Pavel and {Lavechin}, Marvin and {Fustes}, Diego and {Titeux}, Hadrien and {Bouaziz}, Wassim and {Gill}, Marie-Philippe},
+  Author = {{Bredin}, Herv{\\'e} and {Yin}, Ruiqing and {Coria}, Juan Manuel and {Gelly}, Gregory and {Korshunov}, Pavel and {Lavechin}, Marvin and {Fustes}, Diego and {Titeux}, Hadrien and {Bouaziz}, Wassim and {Gill}, Marie-Philippe},
   Booktitle = {ICASSP 2020, IEEE International Conference on Acoustics, Speech, and Signal Processing},
   Address = {Barcelona, Spain},
   Month = {May},
