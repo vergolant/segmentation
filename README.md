@@ -21,31 +21,14 @@ inference: false
 
 ![Example](example.png)
 
-Model from *[End-to-end speaker segmentation for overlap-aware resegmentation](reproducible_research/report.pdf)*, by Hervé Bredin and Antoine Laurent.
+Model from *[End-to-end speaker segmentation for overlap-aware resegmentation](http://arxiv.org/abs/2104.04045)*, by Hervé Bredin and Antoine Laurent.
 
-```bibtex
-@inproceedings{Bredin2020,
-  Title = {{pyannote.audio: neural building blocks for speaker diarization}},
-  Author = {{Bredin}, Herv{\'e} and {Yin}, Ruiqing and {Coria}, Juan Manuel and {Gelly}, Gregory and {Korshunov}, Pavel and {Lavechin}, Marvin and {Fustes}, Diego and {Titeux}, Hadrien and {Bouaziz}, Wassim and {Gill}, Marie-Philippe},
-  Booktitle = {ICASSP 2020, IEEE International Conference on Acoustics, Speech, and Signal Processing},
-  Address = {Barcelona, Spain},
-  Month = {May},
-  Year = {2020},
-}
-```
+Relies on pyannote.audio 2.0 currently in development: see [installation instructions](https://github.com/pyannote/pyannote-audio/tree/develop#installation).
 
 ## Support
 
 For commercial enquiries and scientific consulting, please contact [me](mailto:herve@niderb.fr).  
 For [technical questions](https://github.com/pyannote/pyannote-audio/discussions) and [bug reports](https://github.com/pyannote/pyannote-audio/issues), please check [pyannote.audio](https://github.com/pyannote/pyannote-audio) Github repository.
-
-## Requirements
-
-This model relies on `pyannote.audio` 2.0 (which is still in development as of April 2nd, 2021):
-
-```bash
-$ pip install https://github.com/pyannote/pyannote-audio/archive/develop.zip
-```
 
 ## Basic usage
 
@@ -110,7 +93,7 @@ resegmented_baseline = pipeline({"audio": "audio.wav", "baseline": baseline})
 ## Reproducible research 
 
 In order to reproduce the results of the paper ["End-to-end speaker segmentation for overlap-aware resegmentation
-"](reproducible_research/report.pdf), use the following hyper-parameters:
+"](https://arxiv.org/abs/2104.04045), use the following hyper-parameters:
 
 Voice activity detection  | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
@@ -132,3 +115,15 @@ VoxConverse     | 0.537   | 0.724    | 0.410             | 0.563
 
 Expected outputs (and VBx baseline) are also provided in the `/reproducible_research` sub-directories.
 
+## Citation
+
+```bibtex
+@inproceedings{Bredin2020,
+  Title = {{pyannote.audio: neural building blocks for speaker diarization}},
+  Author = {{Bredin}, Herv{\'e} and {Yin}, Ruiqing and {Coria}, Juan Manuel and {Gelly}, Gregory and {Korshunov}, Pavel and {Lavechin}, Marvin and {Fustes}, Diego and {Titeux}, Hadrien and {Bouaziz}, Wassim and {Gill}, Marie-Philippe},
+  Booktitle = {ICASSP 2020, IEEE International Conference on Acoustics, Speech, and Signal Processing},
+  Address = {Barcelona, Spain},
+  Month = {May},
+  Year = {2020},
+}
+```
