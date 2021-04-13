@@ -21,7 +21,8 @@ inference: false
 
 ![Example](example.png)
 
-Model from *[End-to-end speaker segmentation for overlap-aware resegmentation](http://arxiv.org/abs/2104.04045)*, by Hervé Bredin and Antoine Laurent.
+Model from *[End-to-end speaker segmentation for overlap-aware resegmentation](http://arxiv.org/abs/2104.04045)*,
+by Hervé Bredin and Antoine Laurent.
 
 Relies on pyannote.audio 2.0 currently in development: see [installation instructions](https://github.com/pyannote/pyannote-audio/tree/develop#installation).
 
