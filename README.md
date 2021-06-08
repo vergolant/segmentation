@@ -31,44 +31,24 @@ Relies on pyannote.audio 2.0 currently in development: see [installation instruc
 For commercial enquiries and scientific consulting, please contact [me](mailto:herve@niderb.fr).  
 For [technical questions](https://github.com/pyannote/pyannote-audio/discussions) and [bug reports](https://github.com/pyannote/pyannote-audio/issues), please check [pyannote.audio](https://github.com/pyannote/pyannote-audio) Github repository.
 
-## Basic usage
-
-```python
-from pyannote.audio import Inference
-inference = Inference("pyannote/segmentation")
-segmentation = inference("audio.wav")
-# `segmentation` is a pyannote.core.SlidingWindowFeature
-# instance containing raw segmentation scores like the 
-# one pictured above (output)
-
-from pyannote.audio.pipelines import Segmentation
-pipeline = Segmentation(segmentation="pyannote/segmentation")
-HYPER_PARAMETERS = {
-  # onset/offset activation thresholds
-  "onset": 0.5, "offset": 0.5,
-  # remove speaker turn shorter than that many seconds.
-  "min_duration_on": 0.0,
-  # fill within speaker pauses shorter than that many seconds.
-  "min_duration_off": 0.0
-}
-
-pipeline.instantiate(HYPER_PARAMETERS)
-segmentation = pipeline("audio.wav")
-# `segmentation` now is a pyannote.core.Annotation
-# instance containing a hard binary segmentation 
-# like the one picutred above (reference)
-```
-
-
-## Advanced usage
+## Usage
 
 ### Voice activity detection
 
 ```python
 from pyannote.audio.pipelines import VoiceActivityDetection
 pipeline = VoiceActivityDetection(segmentation="pyannote/segmentation")
+HYPER_PARAMETERS = {
+  # onset/offset activation thresholds
+  "onset": 0.5, "offset": 0.5,
+  # remove speech regions shorter than that many seconds.
+  "min_duration_on": 0.0,
+  # fill non-speech regions shorter than that many seconds.
+  "min_duration_off": 0.0
+}
 pipeline.instantiate(HYPER_PARAMETERS)
 vad = pipeline("audio.wav")
+# `vad` is a pyannote.core.Annotation instance containing speech regions
 ```
 
 ### Overlapped speech detection
@@ -78,6 +58,7 @@ from pyannote.audio.pipelines import OverlappedSpeechDetection
 pipeline = OverlappedSpeechDetection(segmentation="pyannote/segmentation")
 pipeline.instantiate(HYPER_PARAMETERS)
 osd = pipeline("audio.wav")
+# `osd` is a pyannote.core.Annotation instance containing overlapped speech regions
 ```
 
 ### Resegmentation
@@ -89,6 +70,17 @@ pipeline = Resegmentation(segmentation="pyannote/segmentation",
 pipeline.instantiate(HYPER_PARAMETERS)
 resegmented_baseline = pipeline({"audio": "audio.wav", "baseline": baseline})
 # where `baseline` should be provided as a pyannote.core.Annotation instance
+```
+
+### Raw scores
+
+```python
+from pyannote.audio import Inference
+inference = Inference("pyannote/segmentation")
+segmentation = inference("audio.wav")
+# `segmentation` is a pyannote.core.SlidingWindowFeature
+# instance containing raw segmentation scores like the 
+# one pictured above (output)
 ```
 
 ## Reproducible research 
@@ -117,6 +109,16 @@ VoxConverse     | 0.537   | 0.724    | 0.410             | 0.563
 Expected outputs (and VBx baseline) are also provided in the `/reproducible_research` sub-directories.
 
 ## Citation
+
+```bibtex
+@inproceedings{Bredin2021,
+  Title = {{End-to-end speaker segmentation for overlap-aware resegmentation}},
+  Author = {{Bredin}, Herv{\'e} and {Laurent}, Antoine},
+  Booktitle = {Proc. Interspeech 2021},
+  Address = {Brno, Czech Republic},
+  Month = {August},
+  Year = {2021},
+```
 
 ```bibtex
 @inproceedings{Bredin2020,
