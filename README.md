@@ -90,15 +90,15 @@ In order to reproduce the results of the paper ["End-to-end speaker segmentation
 
 Voice activity detection  | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
-AMI Mix-Headset | 0.851   | 0.430    | 0.115             | 0.146
-DIHARD3         | 0.855   | 0.292    | 0.036             | 0.001
-VoxConverse     | 0.883   | 0.688    | 0.106             | 0.526
+AMI Mix-Headset | 0.684   | 0.577    | 0.181             | 0.037
+DIHARD3         | 0.767   | 0.377    | 0.136             | 0.067
+VoxConverse     | 0.767   | 0.713    | 0.182             | 0.501
 
 Overlapped speech detection | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
-AMI Mix-Headset | 0.552   | 0.311    | 0.131             | 0.180
-DIHARD3         | 0.564   | 0.264    | 0.158             | 0.080
-VoxConverse     | 0.617   | 0.387    | 0.367             | 0.334
+AMI Mix-Headset | 0.448   | 0.362    | 0.116             | 0.187
+DIHARD3         | 0.430   | 0.320    | 0.091             | 0.144
+VoxConverse     | 0.587   | 0.426    | 0.337             | 0.112
 
 Resegmentation of VBx | `onset` | `offset` | `min_duration_on` | `min_duration_off`
 ----------------|---------|----------|-------------------|-------------------
