@@ -24,7 +24,7 @@ inference: false
 Model from *[End-to-end speaker segmentation for overlap-aware resegmentation](http://arxiv.org/abs/2104.04045)*,  
 by Hervé Bredin and Antoine Laurent.
 
-Relies on pyannote.audio 2.0 currently in development: see [installation instructions](https://github.com/pyannote/pyannote-audio/tree/develop#installation).
+[Online demo](https://huggingface.co/spaces/pyannote/segmentation) is available as a Hugging Face Space.
 
 ## Support
 
@@ -32,6 +32,8 @@ For commercial enquiries and scientific consulting, please contact [me](mailto:h
 For [technical questions](https://github.com/pyannote/pyannote-audio/discussions) and [bug reports](https://github.com/pyannote/pyannote-audio/issues), please check [pyannote.audio](https://github.com/pyannote/pyannote-audio) Github repository.
 
 ## Usage
+
+Relies on pyannote.audio 2.0 currently in development: see [installation instructions](https://github.com/pyannote/pyannote-audio/tree/develop#installation).
 
 ### Voice activity detection
 
