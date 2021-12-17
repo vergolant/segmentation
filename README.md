@@ -24,7 +24,7 @@ inference: false
 Model from *[End-to-end speaker segmentation for overlap-aware resegmentation](http://arxiv.org/abs/2104.04045)*,  
 by Hervé Bredin and Antoine Laurent.
 
-[Online demo](https://huggingface.co/spaces/pyannote/segmentation) is available as a Hugging Face Space.
+[Online demo](https://huggingface.co/spaces/pyannote/pretrained-pipelines) is available as a Hugging Face Space.
 
 ## Support
 
