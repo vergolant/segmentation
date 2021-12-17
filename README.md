@@ -17,7 +17,7 @@ license: mit
 inference: false
 ---
 
-# pyannote.audio // speaker segmentation
+# 🎹 Speaker segmentation
 
 ![Example](example.png)
 
