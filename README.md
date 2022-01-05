@@ -1,6 +1,7 @@
 ---
 tags:
 - pyannote
+- pretrained-model
 - audio
 - voice
 - speech
