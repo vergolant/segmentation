@@ -1,6 +1,7 @@
 ---
 tags:
 - pyannote
+- pyannote-audio
 - pyannote-audio-model
 - audio
 - voice
