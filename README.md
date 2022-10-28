@@ -35,8 +35,8 @@ extra_gated_fields:
 Relies on pyannote.audio 2.1: see [installation instructions](https://github.com/pyannote/pyannote-audio).
 
 ```python
-# 1. visit hf.co/pyannote/segmentation and accept user conditions (only if requested)
-# 2. visit hf.co/settings/tokens to create an access token (only if you had to go through 1.)
+# 1. visit hf.co/pyannote/segmentation and accept user conditions
+# 2. visit hf.co/settings/tokens to create an access token
 # 3. instantiate pretrained model
 from pyannote.audio import model
 model = Model.from_pretrained("pyannote/segmentation", 
