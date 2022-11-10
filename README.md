@@ -32,7 +32,7 @@ extra_gated_fields:
 
 ## Usage
 
-Relies on pyannote.audio 2.1: see [installation instructions](https://github.com/pyannote/pyannote-audio).
+Relies on pyannote.audio 2.1.1: see [installation instructions](https://github.com/pyannote/pyannote-audio).
 
 ```python
 # 1. visit hf.co/pyannote/segmentation and accept user conditions
