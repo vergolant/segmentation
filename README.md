@@ -38,7 +38,7 @@ Relies on pyannote.audio 2.1.1: see [installation instructions](https://github.c
 # 1. visit hf.co/pyannote/segmentation and accept user conditions
 # 2. visit hf.co/settings/tokens to create an access token
 # 3. instantiate pretrained model
-from pyannote.audio import model
+from pyannote.audio import Model
 model = Model.from_pretrained("pyannote/segmentation", 
                               use_auth_token="ACCESS_TOKEN_GOES_HERE")
 ```
