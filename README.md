@@ -11,10 +11,6 @@ tags:
 - voice-activity-detection
 - overlapped-speech-detection
 - resegmentation
-datasets:
-- ami
-- dihard
-- voxconverse
 license: mit
 inference: false
 extra_gated_prompt: "The collected information will help acquire a better knowledge of pyannote.audio userbase and help its maintainers apply for grants to improve it further. If you are an academic researcher, please cite the relevant papers in your own publications using the model. If you work for a company, please consider contributing back to pyannote.audio development (e.g. through unrestricted gifts). We also provide scientific consulting services around speaker diarization and machine listening."
