@@ -20,6 +20,10 @@ extra_gated_fields:
   I plan to use this model for (task, type of audio data, etc): text
 ---
 
+
+I propose (paid) scientific [consulting services](https://herve.niderb.fr/consulting.html) to companies willing to make the most of their data and open-source speech processing toolkits (and `pyannote` in particular). 
+
+
 # 🎹 Speaker segmentation
 
 [Paper](http://arxiv.org/abs/2104.04045) | [Demo](https://huggingface.co/spaces/pyannote/pretrained-pipelines) | [Blog post](https://herve.niderb.fr/fastpages/2022/10/23/One-speaker-segmentation-model-to-rule-them-all)
@@ -89,10 +93,6 @@ segmentation = inference("audio.wav")
 # one pictured above (output)
 ```
 
-## Support
-
-For commercial enquiries and scientific consulting, please contact [me](mailto:herve@niderb.fr).  
-For [technical questions](https://github.com/pyannote/pyannote-audio/discussions) and [bug reports](https://github.com/pyannote/pyannote-audio/issues), please check [pyannote.audio](https://github.com/pyannote/pyannote-audio) Github repository.
 
 ## Citation
 
