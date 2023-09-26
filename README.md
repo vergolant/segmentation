@@ -20,8 +20,8 @@ extra_gated_fields:
   I plan to use this model for (task, type of audio data, etc): text
 ---
 
-
-I propose (paid) scientific [consulting services](https://herve.niderb.fr/consulting.html) to companies willing to make the most of their data and open-source speech processing toolkits (and `pyannote` in particular). 
+Using this open-source model in production?  
+Make the most of it thanks to our [consulting services](https://herve.niderb.fr/consulting.html).
 
 
 # 🎹 Speaker segmentation
